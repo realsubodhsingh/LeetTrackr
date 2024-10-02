@@ -1,0 +1,260 @@
+html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(255, 253, 240);
+        }
+
+        .title {
+            margin: 0px;
+            width: 10rem;
+            height: 100vh;
+            background-color: black;
+            color: #FFA015;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            left: 0;
+        }
+
+        .title h2 {
+            transform: rotate(-180deg);
+            writing-mode: vertical-rl;
+            text-align: center;
+            margin: 0;
+            font-family: poppins;
+            font-weight: 300;
+            font-size: 40px;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: end;
+        }
+
+        .space {
+            width: 90vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .search {
+            position: relative;
+        }
+
+        .search input {
+            width: 30rem;
+            height: 4rem;
+            font-family: poppins;
+            font-size: 20px;
+            outline: none;
+            padding-left: 23px;
+            border-radius: 30px;
+            border: 1px solid white;
+            transition: width 0.25s ease-in-out;
+            box-shadow: 0px 5px 14px rgba(5, 5, 5, 0.5);
+        }
+
+        .search input:focus {
+            width: 40rem;
+            border-radius: 50px;
+            border: 2px solid #FFA015;
+            background-color: white;
+        }
+
+        #search-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: #FFA015;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 100%;
+            cursor: pointer;
+            font-size: 23px;
+        }
+
+        #search-btn:hover {
+            background-color: #f38805;
+            font-size: 24px;
+        }
+
+        .stats-container {
+            width: 50rem;
+            height: 30rem;
+            /* background-color: rgb(1, 107, 199); */
+        }
+
+        .circle {
+            width: 140px;
+            height: 140px;
+            margin: 15px;
+            border-radius: 50%;
+            border: 4px solid #f38805;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1 rem;
+            font-family: poppins;
+            color: white;
+            font-weight: 400;
+            background: conic-gradient(#FFA015 var(--progress-degree, 0%), black 0%);
+            flex-direction: column;
+        }
+
+        .circle span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .progress {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stat-container {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .acceptance-rate-container {
+            margin-top: 20px;
+            height: 7rem;
+            width: 23rem;
+            margin-left: 6rem;
+            color: white;
+            border: 4px solid #f38805;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .acceptance-bar {
+            width: 100%;
+            background-color: white;
+            height: 6rem;
+            border-radius: 0px 40px 0px 0px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .acceptance-rate-fill {
+            background-color: #04b439;
+            height: 100%;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        .para p {
+            margin: 4px;
+            margin-left: 10px;
+            font-size: 1rem;
+            display: inline-block;
+            font-family: poppins;
+        }
+
+        #acceptance-rate-label {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: poppins;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .ranking-card {
+            margin-top: 20px;
+            height: 7rem;
+            width: 10rem;
+            color: white;
+            border: 4px solid #f38805;
+            overflow: hidden;
+            background-color: black;
+            text-align: center;
+            position: relative;
+        }
+
+        .icon-container {
+            margin-top: 20px;
+            font-size: 30px;
+            color: #ffbd06;
+            margin-bottom: 8px;
+        }
+
+        .ranking-info {
+            font-size: 20px;
+            font-weight: 300;
+            font-family: poppins;
+        }
+
+        #submission-calendar {
+            margin-top: 40px;
+            height: 10rem;
+            width: 100%;
+            background-color: black;
+            overflow: scroll;
+            border-radius: 10px;
+            border: 4px solid #f38805;
+            box-shadow: 0 2px 8px rgba(209, 209, 209, 0.1);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 7fr);
+            gap: 4px;
+            margin: 10px;
+            margin-left: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar-day {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+
+        .calendar-day[data-submissions="0"] {
+            background-color: #f0f0f0;
+        }
+
+        .calendar-day[data-submissions="1-3"] {
+            background-color: #c6e48b;
+        }
+
+        .calendar-day[data-submissions="4-6"] {
+            background-color: #7bc96f;
+        }
+
+        .calendar-day[data-submissions="7-10"] {
+            background-color: #239a3b;
+        }
+
+        .calendar-day[data-submissions="10+"] {
+            background-color: #196127;
+        }
+
+        @media (max-width: 768px) {
+            .calendar-day {
+                width: 10px;
+                height: 10px;
+            }
+        }

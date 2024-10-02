@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetTrackr | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Title section for the app name -->
+        <div class="title">
+            <h2>LeetTrackr</h2>
+        </div>
+
+        <div class="space">
+            <!-- Search bar to input the LeetCode username -->
+            <div class="search">
+                <input type="text" placeholder="Enter the username" id="user-input">
+                <button id="search-btn">
+                    <!-- Search icon inside the button -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="stats-container" id="stats-container">
+                <!-- Section for showing progress in Easy, Medium, and Hard questions -->
+                <div class="progress">
+                    <!-- Easy questions progress circle -->
+                    <div class="progress-item">
+                        <div class="easy-progress circle">
+                            <!-- Placeholder for easy questions progress -->
+                            <span id="easy-label"></span>
+                            <p>Easy</p>
+                        </div>
+                    </div>
+
+                    <!-- Medium questions progress circle -->
+                    <div class="progress-item">
+                        <div class="medium-progress circle">
+                            <!-- Placeholder for medium questions progress -->
+                            <span id="medium-label"></span>
+                            <p>Medium</p>
+                        </div>
+                    </div>
+
+                    <!-- Hard questions progress circle -->
+                    <div class="progress-item">
+                        <div class="hard-progress circle">
+                            <!-- Placeholder for hard questions progress -->
+                            <span id="hard-label"></span>
+                            <p>Hard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-container" id="stat-container">
+                    <!-- Section for displaying acceptance rate with a progress bar -->
+                    <div class="acceptance-rate-container">
+                        <label class="para">
+                            <p>Acceptance Rate:</p>
+                        </label>
+                        <!-- Bar indicating the acceptance rate -->
+                        <div class="acceptance-bar">
+                            <div id="acceptance-rate-bar" class="acceptance-rate-fill">
+                                <!-- Placeholder for the acceptance rate percentage -->
+                                <span id="acceptance-rate-label"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ranking-card">
+                        <!-- Icon for ranking -->
+                        <div class="icon-container">
+                            <i class="fa-solid fa-ranking-star"></i>
+                        </div>
+                        <!-- Placeholder for global ranking -->
+                        <div class="ranking-info">
+                            <span id="global-ranking"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="submission-calendar">
+                    <!-- Placeholder grid for the submission calendar visualization -->
+                    <div class="calendar-grid"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+</html>
