@@ -22,11 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return regex.test(username) || alert("Invalid username");
     }
 
-    // Fetch user details from LeetCode API
+  // Fetch user details from LeetCode API
     async function fetchUserDetails(username) {
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-        const apiUrl = `https://leetcode-stats-api.herokuapp.com/${username}`;
-        const url = proxyUrl + apiUrl;
+        const url = `https://leetcode-stats-api.herokuapp.com/${username}`;
         try {
             searchButton.innerHTML = `<i class="fa-solid fa-spinner"></i>`;
             searchButton.disabled = true;
