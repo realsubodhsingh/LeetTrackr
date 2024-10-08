@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch user details from LeetCode API
     async function fetchUserDetails(username) {
-        const url = `https://leetcode-stats-api.herokuapp.com/${username}`;
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const apiUrl = `https://leetcode-stats-api.herokuapp.com/${username}`;
+        const url = proxyUrl + apiUrl;
         try {
             searchButton.innerHTML = `<i class="fa-solid fa-spinner"></i>`;
             searchButton.disabled = true;
